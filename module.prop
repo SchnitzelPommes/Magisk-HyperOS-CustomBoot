@@ -1,0 +1,6 @@
+id=custom-bootanimation-hyperos
+name=Custom Boot Animation for HyperOS
+version=1.0
+versionCode=1
+author=SchnitzelPommes
+description=A Magisk module to override HyperOS boot animation using bootanimation.zip overlay.
