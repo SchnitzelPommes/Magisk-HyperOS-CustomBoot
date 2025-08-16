@@ -1,26 +1,44 @@
-# Custom Boot Animation for HyperOS
+# Dynamic Boot Animation for HyperOS
 
-This Magisk module allows you to replace the default HyperOS boot animation by overlaying your own `bootanimation.zip` into all known system paths used by Xiaomi HyperOS.
+This Magisk module allows HyperOS users to dynamically use a custom `bootanimation.zip` file without modifying the module itself.
+
+---
 
 ## 📦 Features
-- Overlays your custom boot animation into:
+- Loads `bootanimation.zip` from `/sdcard/CustomBoot/` on each boot
+- Supports all known HyperOS animation paths:
   - `/system/media/bootanimation.zip`
   - `/system/product/media/bootanimation.zip`
   - `/system_ext/media/bootanimation.zip`
   - `/system/media/theme/bootanimation.zip`
-- Automatically sets permissions at boot
-- Safe to uninstall or update
+- No need to reflash the module to update your animation
+- Permissions are automatically handled
+- Systemless and safe to remove
 
-## 📥 Installation
-1. Download the latest release `.zip` file.
-2. Open **Magisk** > **Modules** > **Install from storage**.
-3. Select the ZIP file and reboot.
+---
 
-## 🔧 Customization
-To use your own animation, replace the `bootanimation.zip` in this repo before zipping the module.
+## 🧾 How to Use
+
+1. Create a folder on your device:
+   ```
+   /sdcard/CustomBoot/
+   ```
+
+2. Place your desired `bootanimation.zip` into that folder.
+
+3. Flash this module in Magisk:
+   - Open **Magisk > Modules > Install from storage**
+   - Select the ZIP file
+   - Reboot
+
+4. Your custom animation will be applied on each boot.
+
+✅ To change the animation later, just replace the file in `/sdcard/CustomBoot/` and reboot!
+
+---
 
 ## 👤 Author
-Created by **SchnitzelPommes**
 
-## 🪪 License
-MIT License. See [LICENSE](LICENSE) for more information.
+**SchnitzelPommes**  
+Licensed under the MIT License.
+
