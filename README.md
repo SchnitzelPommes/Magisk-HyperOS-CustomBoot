@@ -12,12 +12,31 @@ This Magisk module allows you to replace the default HyperOS boot animation by o
 - Safe to uninstall or update
 
 ## 📥 Installation
-1. Download the latest release `.zip` file.
-2. Open **Magisk** > **Modules** > **Install from storage**.
-3. Select the ZIP file and reboot.
+
+1. Clone or download this repository as a ZIP.
+2. Replace the `bootanimation.zip` in **all four** of these folders:
+   ```
+   system/media/
+   system/media/theme/
+   system/product/media/
+   system_ext/media/
+   ```
+3. Zip the folder structure back up into a `.zip` file.
+4. Open **Magisk** → **Modules** → **Install from storage**.
+5. Select your zip file and reboot.
+
+> 💡 Make sure to keep the folder structure intact inside the zip. The bootanimation.zip must be present in each directory to ensure HyperOS picks it up properly.
 
 ## 🔧 Customization
-To use your own animation, replace the `bootanimation.zip` in this repo before zipping the module.
+
+This method is temporary while dynamic loading is being improved.
+
+You can change your boot animation anytime by:
+- Replacing `bootanimation.zip` in the project
+- Re-zipping it
+- Flashing again via Magisk
+
+A fully dynamic version with on-the-fly support for `/sdcard/CustomBoot/` is being worked on — stay tuned!
 
 ## 👤 Author
 Created by **SchnitzelPommes**
